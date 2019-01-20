@@ -15,7 +15,7 @@ spec:
         app: cfp-service
     spec:
       containers:
-      - image: docker.io/andifalk/cfp-service:latest
+      - image: andifalk/cfp-service:latest
         imagePullPolicy: Always
         name: cfp-service
         ports:
