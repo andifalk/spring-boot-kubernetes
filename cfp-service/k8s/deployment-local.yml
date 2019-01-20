@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cfp-service
+  name: cfp-service
+spec:
+  selector:
+    matchLabels:
+      app: cfp-service
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: cfp-service
+    spec:
+      containers:
+      - image: docker.io/andifalk/cfp-service:latest
+        imagePullPolicy: Always
+        name: cfp-service
+        ports:
+        - containerPort: 8080
+          protocol: TCP  
+      restartPolicy: Always
+

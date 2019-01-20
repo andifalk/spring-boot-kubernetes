@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: conference-service
+
+server:
+    port: 9090
+    

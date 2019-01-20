@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: conference-service
+  name: conference-service
+spec:
+  selector:
+    matchLabels:
+      app: conference-service
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: conference-service
+    spec:
+      containers:
+      - image: andifalk/conference-service:latest
+        imagePullPolicy: Always
+        name: conference-service
+        ports:
+        - containerPort: 9090
+          protocol: TCP  
+      restartPolicy: Always
+

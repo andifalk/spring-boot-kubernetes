@@ -28,3 +28,11 @@ hs_err_pid*
 bin/
 build/
 .vscode/
+
+terraform.tfvars
+*.auto.tfvars
+*.tfstate
+*.tfstate.backup
+.terraform/
+account.json
+.idea/
