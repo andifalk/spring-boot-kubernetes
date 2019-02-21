@@ -20,6 +20,9 @@ spec:
         name: cfp-service
         ports:
         - containerPort: 8080
-          protocol: TCP  
+          protocol: TCP    
       restartPolicy: Always
+      securityContext:
+        runAsNonRoot: true
+
 
